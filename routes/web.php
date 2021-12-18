@@ -14,9 +14,7 @@ use App\Http\Controllers\StatsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [StatsController::class, 'index']);
 
 
 Route::resource('/stats', StatsController::class);

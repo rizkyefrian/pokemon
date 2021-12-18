@@ -36,9 +36,11 @@
                     echo "#$list_no "; // Hasil #000
                     ?>
                 </div>
-                @foreach($data['types'] as $t)
-                         {{$t['type']['name']}}
-                  @endforeach 
+                <div class="col-4" id="name_pokemon">
+                    @foreach($data['types'] as $t)
+                          <button type="button" class="btn btn-info">{{ucfirst($t['type']['name'])}}</button>&nbsp;
+                    @endforeach 
+                </div>
             </div>
         </a>
         @endforeach
